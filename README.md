@@ -3,6 +3,9 @@
 TrLauncher là một ứng dụng khách (launcher) Minecraft thế hệ mới được tối ưu hóa cho cả máy tính (Linux, Windows, macOS) và thiết bị di động (Android APK). Dự án sử dụng cùng một codebase duy nhất nhưng mang đến trải nghiệm đồ họa đồng bộ 100%, tích hợp trình xem nhân vật 3D tương tác hoàn chỉnh và các tính năng tối ưu hóa hệ thống mạnh mẽ.
 
 ---
+## Ảnh demo
+
+<img src="./demo/" width="100%">
 
 ## Các Tính Năng Nổi Bật
 
