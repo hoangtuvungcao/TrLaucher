@@ -1,0 +1,52 @@
+{
+  "name": "trlaucher",
+  "version": "1.0.0",
+  "description": "TrLaucher - Minecraft PE Mobile Launcher",
+  "private": true,
+  "type": "module",
+  "main": "electron.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "sync": "vite build && npx cap sync",
+    "open:android": "npx cap open android",
+    "build:apk": "vite build && npx cap sync android && cd android && ./gradlew assembleDebug",
+    "build:pc": "electron-builder"
+  },
+  "build": {
+    "appId": "com.trlaucher.app",
+    "productName": "TrLaucher",
+    "directories": {
+      "output": "dist-desktop"
+    },
+    "files": [
+      "dist/**/*",
+      "electron.js",
+      "package.json"
+    ],
+    "win": {
+      "target": "portable"
+    },
+    "linux": {
+      "target": "AppImage"
+    },
+    "mac": {
+      "target": "dmg"
+    }
+  },
+  "devDependencies": {
+    "electron": "^41.7.1",
+    "electron-builder": "^26.15.3",
+    "vite": "^8.0.12"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.4.1",
+    "@capacitor/app-launcher": "^8.0.1",
+    "@capacitor/cli": "^7.6.7",
+    "@capacitor/core": "^8.4.1",
+    "@capacitor/filesystem": "^8.1.2",
+    "@capacitor/network": "^8.0.1",
+    "@capacitor/preferences": "^8.0.1"
+  }
+}

@@ -1,0 +1,57 @@
+@keyframes splash-fill { 0% { width: 0 } 70% { width: 85% } 100% { width: 100% } }
+@keyframes spin { to { transform: rotate(360deg) } }
+@keyframes float { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-6px) } }
+@keyframes pulse-green {
+  0%,100% { box-shadow: 0 0 20px rgba(22,193,114,0.3), 0 4px 16px rgba(22,193,114,0.25); }
+  50%      { box-shadow: 0 0 35px rgba(22,193,114,0.5), 0 4px 24px rgba(22,193,114,0.4); }
+}
+@keyframes pulse-gold {
+  0%,100% { opacity: 1; } 50% { opacity: 0.4; }
+}
+@keyframes glow-text {
+  0%,100% { text-shadow: 0 0 12px rgba(22,193,114,0.4); }
+  50%      { text-shadow: 0 0 24px rgba(22,193,114,0.7); }
+}
+@keyframes page-in { from { opacity:0; transform:translateY(12px) } to { opacity:1; transform:translateY(0) } }
+@keyframes slide-up { from { opacity:0; transform:translateY(16px) } to { opacity:1; transform:translateY(0) } }
+@keyframes slide-right { from { opacity:0; transform:translateX(-16px) } to { opacity:1; transform:translateX(0) } }
+@keyframes fade-in  { from { opacity:0 } to { opacity:1 } }
+@keyframes toast-in { from { opacity:0; transform:translateY(-12px) scale(0.95) } to { opacity:1; transform:translateY(0) scale(1) } }
+@keyframes toast-out { from { opacity:1 } to { opacity:0; transform:translateY(-8px) } }
+@keyframes sheet-up { from { transform:translateY(100%) } to { transform:translateY(0) } }
+@keyframes shimmer  {
+  0% { background-position: -200% 0 }
+  100% { background-position: 200% 0 }
+}
+@keyframes particle-fall {
+  0%   { transform: translateY(-20px) rotate(0deg); opacity:0 }
+  10%  { opacity: 0.6 }
+  90%  { opacity: 0.3 }
+  100% { transform: translateY(105vh) rotate(540deg); opacity:0 }
+}
+@keyframes ping-ring {
+  0%    { transform: scale(1); opacity:0.8 }
+  100%  { transform: scale(2.5); opacity:0 }
+}
+
+.anim-float { animation: float 3s ease infinite; }
+.anim-spin  { animation: spin 1s linear infinite; }
+.anim-fade  { animation: fade-in 0.3s ease; }
+.anim-page  { animation: page-in 0.32s ease; }
+
+.skeleton {
+  background: linear-gradient(90deg, var(--surface) 0%, var(--surface-3) 50%, var(--surface) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.6s infinite;
+  border-radius: var(--r-md);
+}
+
+.ping-ring {
+  position: relative; display: inline-flex;
+  align-items: center; justify-content: center;
+}
+.ping-ring::before {
+  content: ''; position: absolute; inset: 0;
+  border-radius: 99px; background: var(--green);
+  animation: ping-ring 1.8s ease-out infinite;
+}

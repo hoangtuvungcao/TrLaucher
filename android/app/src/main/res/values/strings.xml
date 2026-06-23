@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">TrLaucher</string>
+    <string name="title_activity_main">TrLaucher</string>
+    <string name="package_name">com.trlaucher.app</string>
+    <string name="custom_url_scheme">com.trlaucher.app</string>
+</resources>

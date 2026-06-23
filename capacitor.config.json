@@ -1,0 +1,18 @@
+{
+  "appId": "com.trlaucher.app",
+  "appName": "TrLaucher",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "https"
+  },
+  "android": {
+    "allowMixedContent": true,
+    "captureInput": true,
+    "webContentsDebuggingEnabled": true
+  },
+  "plugins": {
+    "Preferences": {
+      "group": "TrLauncherStore"
+    }
+  }
+}
