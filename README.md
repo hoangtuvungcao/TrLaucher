@@ -5,7 +5,7 @@ TrLauncher là một ứng dụng khách (launcher) Minecraft thế hệ mới �
 ---
 ## Ảnh demo
 
-<img src="./demo/" width="100%">
+<img src="./demo/demo1.png" width="100%">
 
 ## Các Tính Năng Nổi Bật
 
